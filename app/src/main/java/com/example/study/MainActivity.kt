@@ -25,17 +25,17 @@ private const val MyLog = "MyLog"
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var hellButton: Button
-    lateinit var leftButton: Button
-    lateinit var rightButton:Button
-    lateinit var damnTextView1: TextView
-    lateinit var damnTextView2: TextView
-    lateinit var damnTextView3: TextView
-    lateinit var counter: TextView
-    lateinit var countString: String
-    var rand by Delegates.notNull<Float>()
-    var t1 by Delegates.notNull<Float>()
-    var t2 by Delegates.notNull<Float>()
+    private lateinit var hellButton: Button
+    private lateinit var leftButton: Button
+    private lateinit var rightButton:Button
+    private lateinit var damnTextView1: TextView
+    private lateinit var damnTextView2: TextView
+    private lateinit var damnTextView3: TextView
+    private lateinit var counter: TextView
+    private lateinit var countString: String
+    private var t3 by Delegates.notNull<Float>()
+    private var t1 by Delegates.notNull<Float>()
+    private var t2 by Delegates.notNull<Float>()
 
 
 
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         damnTextView1 = findViewById(R.id.damn_text_1)
         damnTextView2 = findViewById(R.id.damn_text_2)
         damnTextView3 = findViewById(R.id.damn_text_3)
-        rand = 0F
+        t3 = 0F
         t1 = 0F
         t2 = 0F
 
@@ -59,9 +59,9 @@ class MainActivity : AppCompatActivity() {
             damnTextView1.text = savedInstanceState.getString(DAMN1_KEY)
             damnTextView2.text = savedInstanceState.getString(DAMN2_KEY)
             damnTextView3.text = savedInstanceState.getString(DAMN3_KEY)
-            damnTextView1.textSize = savedInstanceState.getFloat(DAMN_SIZE1_KEY)
-            damnTextView2.textSize = savedInstanceState.getFloat(DAMN_SIZE2_KEY)
-            damnTextView3.textSize = savedInstanceState.getFloat(DAMN_SIZE3_KEY)
+            damnTextView1.textSize = savedInstanceState.getString(DAMN_SIZE1_KEY)?.toFloat()!!
+            damnTextView2.textSize = savedInstanceState.getString(DAMN_SIZE2_KEY)?.toFloat()!!
+            damnTextView3.textSize = savedInstanceState.getString(DAMN_SIZE3_KEY)?.toFloat()!!
         }
 
 
@@ -78,6 +78,9 @@ class MainActivity : AppCompatActivity() {
             rightBtnIntent.putExtra(PASSING_COUNT, randomValue())
             startActivity(rightBtnIntent)
         }
+
+        Log.d(MyLog, "onCreate\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
+
 
     }
 
@@ -101,13 +104,12 @@ class MainActivity : AppCompatActivity() {
 
          t1 =  randomValue()
          t2 =  randomValue()
-//        var t3 =  randomValue()
-        if ((t1 + t2 + rand) < 190) {
+         t3 =  randomValue()
+        if ((t1 + t2 + t3) < 190) {
 
             damnTextView1.textSize = t1
             damnTextView2.textSize = t2
-            rand = randomValue()
-            damnTextView3.textSize = rand
+            damnTextView3.textSize = t3
 
 
             damnTextView1.text = damnTextView1.text.toString()
@@ -137,9 +139,9 @@ class MainActivity : AppCompatActivity() {
             putString(DAMN1_KEY,damnTextView1.text.toString())
             putString(DAMN2_KEY,damnTextView2.text.toString())
             putString(DAMN3_KEY,damnTextView3.text.toString())
-            putFloat(DAMN_SIZE1_KEY,damnTextView1.textSize)
-            putFloat(DAMN_SIZE2_KEY,damnTextView2.textSize)
-            putFloat(DAMN_SIZE3_KEY,damnTextView3.textSize)
+            putString(DAMN_SIZE1_KEY,damnTextView1.textSize.toString())
+            putString(DAMN_SIZE2_KEY,damnTextView2.textSize.toString())
+            putString(DAMN_SIZE3_KEY,damnTextView3.textSize.toString())
 
         }
     }
@@ -147,35 +149,35 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d(MyLog, "onStart\n " + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + rand )
+        Log.d(MyLog, "onStart\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d(MyLog, "onResume\n"+ damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + rand )
+        Log.d(MyLog, "onResume\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d(MyLog,"onPause\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + rand )
+        Log.d(MyLog,"onPause\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
 
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(MyLog,"onStop\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + rand )
+        Log.d(MyLog,"onStop\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
 
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.d(MyLog,"onRestart\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + rand )
+        Log.d(MyLog,"onRestart\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(MyLog,"onDestroy\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + rand )
+        Log.d(MyLog,"onDestroy\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
 
     }
 
