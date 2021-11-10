@@ -4,7 +4,15 @@
     <string name="button_text">go to hell</string>
     <string name="hello">Welcome to Nightmare!</string>
     <string name="text_size">55sp</string>
-    <string name="damn_text_1" >Hey U!</string>
+    <string name="damn_text_1">Hey U!</string>
     <string name="damn_text_2" />
     <string name="damn_text_3" />
+    <string name="left_button">Pain</string>
+    <string name="right_button">Random</string>
+    <string name="count_String">0</string>
+    <string name="midGhost_button_text">midGhost_button</string>
+    <string name="right_btn_header_text">It\'s your &#160;&#160;&#160;&#160; number</string>
+    <string name="pumpkin_btn_text">pumpkinButton</string>
+    <string name="rightGhost_btn_text">rightGhostButton</string>
+    <string name="leftGhost_btn_text">left Ghost Button</string>>
 </resources>
