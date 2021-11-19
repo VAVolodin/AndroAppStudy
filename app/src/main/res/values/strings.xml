@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Study</string>
-    <string name="bye">Press and DIE !</string>
+    <string name="bye">Press and DIcE !</string>
     <string name="button_text">go to hell</string>
-    <string name="hello">Welcome to Nightmare!</string>
+    <string name="hello">Welcome to Nightmare Party!</string>
     <string name="text_size">55sp</string>
     <string name="damn_text_1">Hey U!</string>
     <string name="damn_text_2" />
@@ -15,4 +15,9 @@
     <string name="pumpkin_btn_text">pumpkinButton</string>
     <string name="rightGhost_btn_text">rightGhostButton</string>
     <string name="leftGhost_btn_text">left Ghost Button</string>>
+    <string name="setup_title_text">Enter Your Name</string>
+    <string name="label1">Player 1</string>
+    <string name="label2">Player 2</string>
+    <string name="submit_btn">Submit</string>
+    <string name="name_hint">Enter Your Name</string>
 </resources>

@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Study/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Study/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Study/app/src/main/res/layout/activity_right_button.xml" value="0.25" />
+        <entry key="..\:/Study/app/src/main/res/layout/press_dice_btn.xml" value="0.32135416666666666" />
       </map>
     </option>
   </component>

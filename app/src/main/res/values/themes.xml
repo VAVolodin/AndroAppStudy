@@ -12,5 +12,46 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+<!--        <item name="materialButtonStyle">@style/Theme.TicTacToeApp.Button</item>-->
+        <item name="android:textViewStyle">@style/Theme.Study.TextView</item>
+
     </style>
+
+    <style name="Theme.Study.TextView" parent="TextAppearance.AppCompat.Body1">
+       <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:shadowColor">@color/navZone_shadowColor</item>
+        <item name="android:shadowDy">5</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:textColor">@color/navZone_textColor</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
+    <style name="Theme.Study.DamnText" parent="Theme.Study.TextView">
+        <item name="fontFamily">@font/brasblus</item>
+    </style>
+
+    <style name="Main.Button" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/brasblus</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_weight">1</item>
+
+    </style>
+
+    <style name="TicTacBoard.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:insetTop">2dp</item>
+        <item name="android:insetBottom">2dp</item>
+        <item name="android:insetLeft">2dp</item>
+        <item name="android:insetRight">2dp</item>
+        <item name="cornerRadius">2dp</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:maxHeight">100dp</item>
+        <item name="android:minHeight">100dp</item>
+        <item name="android:minWidth">100dp</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

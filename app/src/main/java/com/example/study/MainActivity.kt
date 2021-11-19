@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var hellButton: Button
     private lateinit var leftButton: Button
     private lateinit var rightButton:Button
+    private lateinit var pressDiceBtn:TextView
+
     private lateinit var damnTextView1: TextView
     private lateinit var damnTextView2: TextView
     private lateinit var damnTextView3: TextView
@@ -43,9 +46,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val rightBtnIntent = Intent(this, rightButtonActivity::class.java)
+        val pressDiceBtnIntet = Intent(this,pressDiceBtnActivity::class.java)
         hellButton = findViewById(R.id.hell_button)
         leftButton = findViewById(R.id.left_button)
         rightButton = findViewById(R.id.right_button)
+        pressDiceBtn = findViewById(R.id.bye_text)
         counter = findViewById(R.id.count)
         damnTextView1 = findViewById(R.id.damn_text_1)
         damnTextView2 = findViewById(R.id.damn_text_2)
@@ -74,10 +79,16 @@ class MainActivity : AppCompatActivity() {
 
         hellButton.setOnClickListener { randomize() }
         leftButton.setOnClickListener{ toastMe() }
+
+        // start components Activity
         rightButton.setOnClickListener{
             rightBtnIntent.putExtra(PASSING_COUNT, randomValue())
             startActivity(rightBtnIntent)
         }
+        pressDiceBtn.setOnClickListener{
+            startActivity(pressDiceBtnIntet)
+        }
+
 
         Log.d(MyLog, "onCreate\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
 
@@ -97,6 +108,9 @@ class MainActivity : AppCompatActivity() {
         counter.text = count.toString()
     }
 
+//    private fun fontSizeConvert() {
+//        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,)
+//    }
     private fun randomize(){
         damnTextView1.text = "Damn "
         damnTextView2.text = "you"

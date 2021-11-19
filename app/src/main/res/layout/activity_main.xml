@@ -13,13 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-black"
-        android:shadowColor="@color/navZone_shadowColor"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="10"
         android:text="@string/hello"
-        android:textColor="@color/navZone_textColor"
         android:textSize="23sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -30,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/hell_button"
+        app:layout_constraintBottom_toTopOf="@+id/count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hello_text">
@@ -80,76 +74,88 @@
 
     </LinearLayout>
 
+
     <TextView
         android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
         android:fontFamily="casual"
         android:text="@string/count_String"
         android:textColor="@color/purple_200"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/hell_button"
+        app:layout_constraintBottom_toTopOf="@+id/btns_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello_text"
-        app:layout_constraintVertical_bias="0.879" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/left_button"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:text="@string/left_button"
-        app:layout_constraintBottom_toTopOf="@+id/bye_text"
-        app:layout_constraintEnd_toStartOf="@+id/hell_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello_text"
-        app:layout_constraintVertical_bias="0.965" />
-
-
-    <Button
-        android:id="@+id/hell_button"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:text="@string/button_text"
-        app:layout_constraintBottom_toTopOf="@id/bye_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hello_text"
-        app:layout_constraintVertical_bias="0.966" />
-
-
-    <Button
-        android:id="@+id/right_button"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/right_button"
+    <LinearLayout
+        android:id="@+id/btns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
         app:layout_constraintBottom_toTopOf="@+id/bye_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toEndOf="@+id/hell_button"
-        app:layout_constraintTop_toBottomOf="@+id/hello_text"
-        app:layout_constraintVertical_bias="0.965" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <Button
+            style="@style/Main.Button"
+            android:id="@+id/left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/left_button"
+            app:layout_constraintBottom_toTopOf="@+id/bye_text"
+            app:layout_constraintEnd_toStartOf="@+id/hell_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hello_text"
+            />
+
+        <Button
+            style="@style/Main.Button"
+            android:id="@+id/hell_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/button_text"
+            app:layout_constraintBottom_toTopOf="@id/bye_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hello_text"
+            />
+
+        <Button
+            style="@style/Main.Button"
+            android:id="@+id/right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/right_button"
+            app:layout_constraintBottom_toTopOf="@+id/bye_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toEndOf="@+id/hell_button"
+            app:layout_constraintTop_toBottomOf="@+id/hello_text"
+            />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/bye_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:fontFamily="sans-serif-black"
-        android:shadowColor="@color/navZone_shadowColor"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:shadowRadius="10"
+        android:clickable="true"
         android:text="@string/bye"
-        android:textColor="@color/navZone_textColor"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="KeyboardInaccessibleWidget" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
