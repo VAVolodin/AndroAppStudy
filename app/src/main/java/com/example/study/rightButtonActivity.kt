@@ -2,6 +2,7 @@ package com.example.study
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.Gravity
 import android.widget.Button
 import android.widget.TextView
@@ -41,7 +42,7 @@ class rightButtonActivity : AppCompatActivity() {
     }
 
     private fun toastMidGhost(){
-        val myToast = Toast.makeText(this,"~~ hey DUDE ~~\n get your number " +numberView.text+ "\nand f**k off", Toast.LENGTH_LONG)
+        val myToast = Toast.makeText(this,"~~ hey DUDE ~~\n get your number " +numberView.text+ "\nand GET OUT !!!", Toast.LENGTH_LONG)
         myToast.setGravity(Gravity.TOP, Gravity.CENTER_HORIZONTAL, 650)
         myToast.show()
     }
@@ -57,4 +58,6 @@ class rightButtonActivity : AppCompatActivity() {
         myToast.setGravity(Gravity.TOP, 500, 900)
         myToast.show()
     }
+
+
 }

@@ -19,5 +19,21 @@
     <string name="label1">Player 1</string>
     <string name="label2">Player 2</string>
     <string name="submit_btn">Submit</string>
-    <string name="name_hint">Enter Your Name</string>
+    <string name="name_hint1">Spooky ghost</string>
+    <string name="name_hint2">Lovely ghoul</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_text">Tic Tac Toe</string>
+    <string name="a1_description">first cell of first row</string>
+    <string name="a2_description">second cell of first row</string>
+    <string name="a3_description">third cell of first row</string>
+    <string name="b1_description">first cell of second row</string>
+    <string name="b2_description">second cell of second row</string>
+    <string name="b3_description">third cell of second row</string>
+    <string name="c1_description">first cell of third row</string>
+    <string name="c2_description">second cell of third row</string>
+    <string name="c3_description">third cell of third row</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="exit_btn">i\'m go out</string>
 </resources>

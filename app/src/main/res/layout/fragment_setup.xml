@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setup_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SetupFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D7CCC8"
+        >
+
+        <TextView
+            android:id="@+id/playerSetup_title"
+            android:layout_width="291dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/setup_title_text"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/player1_title"
+            android:layout_width="67dp"
+            android:layout_height="29dp"
+            android:text="@string/label1"
+            android:textColor="#E91E63"
+            app:layout_constraintBottom_toTopOf="@+id/player1_nameText"
+            app:layout_constraintStart_toStartOf="@+id/player1_nameText" />
+
+        <TextView
+            android:id="@+id/player2_title"
+            android:layout_width="67dp"
+            android:layout_height="29dp"
+            android:text="@string/label2"
+            android:textColor="#3F51B5"
+            app:layout_constraintBottom_toTopOf="@+id/player2_nameText"
+            app:layout_constraintStart_toStartOf="@+id/player2_nameText" />
+
+    <EditText
+        android:id="@+id/player1_nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/name_hint1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerSetup_title"
+        android:autofillHints="Player_1" />
+
+    <EditText
+        android:id="@+id/player2_nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/name_hint2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1_nameText"
+        android:autofillHints="Player_2" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="201dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/submit_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2_nameText" />
+
+        <Button
+            android:id="@+id/exit_button"
+            android:layout_width="201dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="56dp"
+            android:text="@string/exit_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/submit_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

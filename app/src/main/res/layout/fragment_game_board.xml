@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="btnClick"
+    tools:context=".GameBoard">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D7CCC8">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="230dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/title_text"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/turnView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text=""
+            android:textSize="42sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/turnSymbolView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/turnView" />
+
+        <GridLayout
+            android:id="@+id/btns_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#A6A0AE"
+            android:columnCount="3"
+            android:rowCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/turnSymbolView">
+
+
+            <Button
+                android:id="@+id/c1"
+                style="@style/GameBoard.Button"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:contentDescription="@string/c1_description" />
+
+            <Button
+                android:id="@+id/c2"
+                style="@style/GameBoard.Button"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:contentDescription="@string/c2_description" />
+
+            <Button
+                android:id="@+id/c3"
+                style="@style/GameBoard.Button"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:contentDescription="@string/c3_description" />
+
+            <Button
+                android:id="@+id/b2"
+                style="@style/GameBoard.Button"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:contentDescription="@string/b2_description" />
+
+            <Button
+                android:id="@+id/a2"
+                style="@style/GameBoard.Button"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:contentDescription="@string/a2_description" />
+
+            <Button
+                android:id="@+id/a1"
+                style="@style/GameBoard.Button"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:contentDescription="@string/a1_description" />
+
+            <Button
+                android:id="@+id/a3"
+                style="@style/GameBoard.Button"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:contentDescription="@string/a3_description" />
+
+            <Button
+                android:id="@+id/b1"
+                style="@style/GameBoard.Button"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:contentDescription="@string/b1_description" />
+
+            <Button
+                android:id="@+id/b3"
+                style="@style/GameBoard.Button"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:contentDescription="@string/b3_description" />
+
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

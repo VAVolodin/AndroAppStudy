@@ -147,7 +147,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-            super.onSaveInstanceState(outState)
         outState.apply {
             putString(COUNT_KEY,counter.text.toString())
             putString(DAMN1_KEY,damnTextView1.text.toString())
@@ -156,7 +155,7 @@ class MainActivity : AppCompatActivity() {
             putString(DAMN_SIZE1_KEY,damnTextView1.textSize.toString())
             putString(DAMN_SIZE2_KEY,damnTextView2.textSize.toString())
             putString(DAMN_SIZE3_KEY,damnTextView3.textSize.toString())
-
+            super.onSaveInstanceState(outState)
         }
     }
 

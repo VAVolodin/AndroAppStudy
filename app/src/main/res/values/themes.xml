@@ -40,7 +40,7 @@
 
     </style>
 
-    <style name="TicTacBoard.Button" parent="Widget.MaterialComponents.Button">
+    <style name="GameBoard.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:insetTop">2dp</item>
         <item name="android:insetBottom">2dp</item>
         <item name="android:insetLeft">2dp</item>

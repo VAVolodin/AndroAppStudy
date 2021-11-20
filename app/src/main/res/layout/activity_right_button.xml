@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ghost"
-    android:scaleType="fitXY"
+    android:scaleType="centerCrop"
     tools:context=".rightButtonActivity">
 
     <TextView
@@ -24,7 +24,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
+        android:layout_marginBottom="24dp"
         android:fontFamily="serif-monospace"
         android:rotation="3"
         android:rotationX="36"
@@ -32,15 +32,14 @@
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="10"
-        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="45sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pumpkinBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/right_btn_header" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/midGhostBtn"
@@ -92,14 +91,13 @@
         style="@android:style/Widget.Button"
         android:layout_width="194dp"
         android:layout_height="234dp"
+        android:layout_marginBottom="92dp"
         android:background="#00FFFFFF"
         android:text="@string/pumpkin_btn_text"
         android:textSize="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
