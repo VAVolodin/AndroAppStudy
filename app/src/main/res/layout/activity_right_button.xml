@@ -8,6 +8,8 @@
     android:scaleType="centerCrop"
     tools:context=".rightButtonActivity">
 
+
+
     <TextView
         android:id="@+id/right_btn_header"
         android:layout_width="match_parent"
@@ -41,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <TextView
         android:id="@+id/midGhostBtn"
         style="@android:style/Widget.Button"
         android:layout_width="91dp"
@@ -56,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.216" />
 
-    <Button
+    <TextView
         android:id="@+id/leftGhostBtn"
         style="@android:style/Widget.Button"
         android:layout_width="89dp"
@@ -71,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/right_btn_header"
         app:layout_constraintVertical_bias="0.38" />
 
-    <Button
+    <TextView
         android:id="@+id/rightGhostBtn"
         style="@android:style/Widget.Button"
         android:layout_width="101dp"
@@ -86,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/right_btn_header"
         app:layout_constraintVertical_bias="0.412" />
 
-    <Button
+    <TextView
         android:id="@+id/pumpkinBtn"
         style="@android:style/Widget.Button"
         android:layout_width="194dp"
@@ -99,5 +101,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cats_button"
+        android:layout_width="155dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/round_background"
+        android:gravity="center"
+        android:text="@string/funny_cats"
+        android:textColor="#79E0ED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,9 +2,7 @@ package com.example.study
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Gravity
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
@@ -13,11 +11,12 @@ private const val PASSING_COUNT = "RANDOM_COUNT"
 
 class rightButtonActivity : AppCompatActivity() {
 
-    lateinit var midGhostBtn: Button
-    lateinit var leftGhostBtn: Button
-    lateinit var rightGhostBtn: Button
-    lateinit var pumpkinBtn: Button
+    lateinit var midGhostBtn: TextView
+    lateinit var leftGhostBtn: TextView
+    lateinit var rightGhostBtn: TextView
+    lateinit var pumpkinBtn: TextView
     lateinit var numberView:TextView
+    lateinit var catsBtn: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +28,8 @@ class rightButtonActivity : AppCompatActivity() {
         leftGhostBtn = findViewById(R.id.leftGhostBtn)
         rightGhostBtn = findViewById(R.id.rightGhostBtn)
         pumpkinBtn = findViewById(R.id.pumpkinBtn)
+        catsBtn = findViewById(R.id.cats_button)
+
         val count = intent.extras?.getFloat(PASSING_COUNT)
         if (count != null) {
             numberView.text = count.toInt().toString()
@@ -38,6 +39,8 @@ class rightButtonActivity : AppCompatActivity() {
         leftGhostBtn.setOnClickListener{toastLeftGhost()}
         rightGhostBtn.setOnClickListener{toastRightGhost()}
         pumpkinBtn.setOnClickListener{toastMidGhost()}
+        catsBtn.setOnClickListener{ showCats() }
+
 
     }
 
@@ -59,5 +62,12 @@ class rightButtonActivity : AppCompatActivity() {
         myToast.show()
     }
 
+    private fun showCats() {
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragment_container,CatsGallery())
+            .addToBackStack(null)
+            .commit()
+    }
 
 }

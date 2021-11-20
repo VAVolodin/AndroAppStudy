@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Study/app/src/main/res/drawable/round_background.xml" value="0.3" />
         <entry key="..\:/Study/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Study/app/src/main/res/layout/activity_right_button.xml" value="0.25" />
+        <entry key="..\:/Study/app/src/main/res/layout/activity_right_button.xml" value="0.5" />
+        <entry key="..\:/Study/app/src/main/res/layout/cats_card.xml" value="0.33" />
+        <entry key="..\:/Study/app/src/main/res/layout/cats_gallery.xml" value="0.27395833333333336" />
         <entry key="..\:/Study/app/src/main/res/layout/dice_game.xml" value="0.28072916666666664" />
         <entry key="..\:/Study/app/src/main/res/layout/fragment_blank.xml" value="0.3572916666666667" />
         <entry key="..\:/Study/app/src/main/res/layout/fragment_game_board.xml" value="0.5" />
