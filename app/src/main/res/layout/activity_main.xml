@@ -79,14 +79,17 @@
         android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="52dp"
         android:fontFamily="casual"
+        android:rotationX="37"
+        android:rotationY="-4"
         android:text="@string/count_String"
         android:textColor="@color/purple_200"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btns_layout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
@@ -96,16 +99,16 @@
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingRight="5dp"
         android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         app:layout_constraintBottom_toTopOf="@+id/bye_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            style="@style/Main.Button"
             android:id="@+id/left_button"
+            style="@style/Main.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -113,24 +116,22 @@
             app:layout_constraintBottom_toTopOf="@+id/bye_text"
             app:layout_constraintEnd_toStartOf="@+id/hell_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hello_text"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/hello_text" />
 
         <Button
-            style="@style/Main.Button"
             android:id="@+id/hell_button"
+            style="@style/Main.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/button_text"
             app:layout_constraintBottom_toTopOf="@id/bye_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hello_text"
-            />
+            app:layout_constraintTop_toBottomOf="@id/hello_text" />
 
         <Button
-            style="@style/Main.Button"
             android:id="@+id/right_button"
+            style="@style/Main.Button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
@@ -139,8 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toEndOf="@+id/hell_button"
-            app:layout_constraintTop_toBottomOf="@+id/hello_text"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/hello_text" />
 
     </LinearLayout>
 

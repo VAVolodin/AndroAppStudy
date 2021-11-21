@@ -31,6 +31,8 @@
             android:layout_width="67dp"
             android:layout_height="29dp"
             android:text="@string/label1"
+            android:fontFamily="@font/brasblus"
+            android:gravity="center"
             android:textColor="#E91E63"
             app:layout_constraintBottom_toTopOf="@+id/player1_nameText"
             app:layout_constraintStart_toStartOf="@+id/player1_nameText" />
@@ -39,7 +41,9 @@
             android:id="@+id/player2_title"
             android:layout_width="67dp"
             android:layout_height="29dp"
+            android:fontFamily="@font/brasblus"
             android:text="@string/label2"
+            android:gravity="center"
             android:textColor="#3F51B5"
             app:layout_constraintBottom_toTopOf="@+id/player2_nameText"
             app:layout_constraintStart_toStartOf="@+id/player2_nameText" />
@@ -78,6 +82,8 @@
         android:layout_height="57dp"
         android:layout_marginTop="80dp"
         android:text="@string/submit_btn"
+        android:fontFamily="@font/brasblus"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player2_nameText" />
@@ -88,6 +94,8 @@
             android:layout_height="57dp"
             android:layout_marginTop="56dp"
             android:text="@string/exit_btn"
+            android:fontFamily="@font/brasblus"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/submit_button" />

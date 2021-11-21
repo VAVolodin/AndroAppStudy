@@ -7,17 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 
 private const val KEY_PASS = "KEY_PASS"
 
-class GameBoard : Fragment(), Datatransfer {
+class GameBoard : Fragment() {
 
     enum class Turn { O, X }
 
-    private var firstPlayer = Turn.X
-    private var secondPlayer= Turn.O
+    private var firstPlayer = Turn.O
+    private var secondPlayer= Turn.X
 
     private var scoreX = 0
     private var scoreO = 0
@@ -35,11 +36,14 @@ class GameBoard : Fragment(), Datatransfer {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_game_board, container, false)
         val set = arguments?.getStringArray(KEY_PASS)
-        firstPlayerName = (set?.get(0) ?: "Spooky ghost").toString()
-        secondPlayerName = (set?.get(1) ?: "Lovely ghoul").toString()
-        view.findViewById<TextView>(R.id.turnView).text = firstPlayerName
-         view.findViewById<TextView>(R.id.turnSymbolView).text = secondPlayerName
+        if (set?.get(0).toString() != "" && set?.get(0).toString() != "null" ){ firstPlayerName = set?.get(0).toString() }
+            else {  firstPlayerName = "Spooky ghost" }
+        if (set?.get(1).toString() != "" && set?.get(1).toString() != "null") { secondPlayerName = set?.get(1).toString() }
+            else { secondPlayerName = "Lovely ghoul" }
 
+
+        view.findViewById<TextView>(R.id.turnView).text = firstPlayerName
+        view.findViewById<TextView>(R.id.turnSymbolView).text = Turn.X.toString()
 
 
         boardList.add(view.findViewById<Button>(R.id.a1))
@@ -52,8 +56,12 @@ class GameBoard : Fragment(), Datatransfer {
         boardList.add(view.findViewById<Button>(R.id.c2))
         boardList.add(view.findViewById<Button>(R.id.c3))
 
-        for (item in boardList) { item.setOnClickListener{btnClick(view)}}
 
+        for (item in boardList) {
+            item.setOnClickListener {
+                btnClick(item)
+            }
+        }
         return view
     }
 
@@ -110,6 +118,7 @@ class GameBoard : Fragment(), Datatransfer {
     private fun match(button: Button, symbol : String): Boolean = button.text == symbol
 
     private fun result(title: String) {
+
         val message = "\n$firstPlayerName:  $scoreX\n\n$secondPlayerName:  $scoreO"
         context?.let {
             AlertDialog.Builder(it)
@@ -177,15 +186,15 @@ class GameBoard : Fragment(), Datatransfer {
         var turnText = ""
         var turnSymbol = ""
         if(secondPlayer== Turn.X){
-            turnText = firstPlayerName.toString()
+            turnText = firstPlayerName
             turnSymbol = "X"}
         else if(secondPlayer== Turn.O) {
-            turnText = secondPlayerName.toString()
+            turnText = secondPlayerName
             turnSymbol = "O"
         }
 
-        view?.findViewById<Button>(R.id.turnView)?.text = turnText
-        view?.findViewById<Button>(R.id.turnSymbolView)?.text = turnSymbol
+        view?.findViewById<TextView>(R.id.turnView)?.text = turnText
+        view?.findViewById<TextView>(R.id.turnSymbolView)?.text = turnSymbol
     }
 
     companion object
@@ -193,9 +202,4 @@ class GameBoard : Fragment(), Datatransfer {
         const val O = "O"
         const val X = "X"
     }
-
-    override fun passData(view: View) {
-        TODO("Not yet implemented")
-    }
-
 }

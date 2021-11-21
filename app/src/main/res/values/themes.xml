@@ -12,13 +12,13 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-<!--        <item name="materialButtonStyle">@style/Theme.TicTacToeApp.Button</item>-->
+
         <item name="android:textViewStyle">@style/Theme.Study.TextView</item>
 
     </style>
 
     <style name="Theme.Study.TextView" parent="TextAppearance.AppCompat.Body1">
-       <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:shadowColor">@color/navZone_shadowColor</item>
         <item name="android:shadowDy">5</item>
         <item name="android:shadowDx">5</item>
@@ -41,7 +41,6 @@
     </style>
 
     <style name="GameBoard.Button" parent="Widget.MaterialComponents.Button">
-        <item name="android:insetTop">2dp</item>
         <item name="android:insetBottom">2dp</item>
         <item name="android:insetLeft">2dp</item>
         <item name="android:insetRight">2dp</item>
@@ -50,8 +49,10 @@
         <item name="android:maxHeight">100dp</item>
         <item name="android:minHeight">100dp</item>
         <item name="android:minWidth">100dp</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">50sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/necropsia</item>
+        <item name="android:textColor">#00F30A</item>
     </style>
 
 </resources>

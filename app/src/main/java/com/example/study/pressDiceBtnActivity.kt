@@ -55,9 +55,6 @@ class pressDiceBtnActivity : AppCompatActivity(),Communicator {
             .commit()
     }
 
-    fun btnClick(view: android.view.View) {
-
-    }
 
     // passing data to GameBoard fragment
     override fun passString(key: String, strArray:Array<String>) {
