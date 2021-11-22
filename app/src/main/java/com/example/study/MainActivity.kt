@@ -160,41 +160,4 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onStart() {
-        super.onStart()
-        Log.d(MyLog, "onStart\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d(MyLog, "onResume\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d(MyLog,"onPause\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
-
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d(MyLog,"onStop\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
-
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.d(MyLog,"onRestart\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
-
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d(MyLog,"onDestroy\n" + damnTextView1.textSize.toString() + " " + t1 + "\n" + damnTextView2.textSize.toString() + " " + t2 + "\n" + damnTextView3.textSize.toString() + " " + t3 )
-
-    }
-
-
-
-
 }
