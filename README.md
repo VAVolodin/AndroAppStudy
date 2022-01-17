@@ -1,5 +1,5 @@
 # AndroAppStudy
-Simple Game Android App
+Simple Game Android App for my kids.
 
 The app has three main activities:
    - the main one with a counter and four buttons (reset, count, random and "Dice");
@@ -9,3 +9,5 @@ The app has three main activities:
                     • main with fields for choosing the players names and the bottom panel for choosing a game;
                     • tic-tac-toe game;
                     • dice game.
+
+Hi-score of "Go to hell"  button: 3003 =)
